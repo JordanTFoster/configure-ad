@@ -20,20 +20,45 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>High-Level Deployment and Configuration Steps</h2>
 
 - Create the Resource Group VNet, and subnet in Azure. (SET EVERYTHING TO THE SAME REGION TO PREVENT ISSUES)
-- Set up the Domain Controller VM in Azure and connect it to the newly created VNet.
+- Set up the Domain Controller VM in Azure (Titled dc-1) and connect it to the newly created VNet.
 - Set the Domain Controller's NIC Private IP address from Dynamic to Static.
-- Set up the Client VM and connect it to the same region and VNet as the Domain Controller.
+- Log in to the Domain Controller VM & Deactivate the firewall for dc-1.
+- Set up the Client VM (Titled Client-1) and connect it to the same region, VNet and subnet as the Domain Controller.
 - Set the Client VM's DNS settings to the Domain Controller's Private IP. The domain controller will act as the Client VM's DNS Server.
 - After changing the DNS settings for the Client VM, restart it in Azure to initiate the changes made.
-- Log into the Client VM, open powershell and type "ipconfig /all". The DNS settings should show the Domain Controller VM's Private IP address.
+- Log into the Client VM, open powershell, type "ipconfig /all", hit Enter. The DNS settings should show the Domain Controller VM's Private IP address.
 
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/3848648c-c750-4955-9b6a-0a63d04f7185" />
 </p>
 <p>
+Upon connecting to dc-1, Server Manager should automatically start up. If not, go ahead and launch it. Click on #2 "Add roles and features". 
+</p>
+<br />
 
+<p>
+<img width="1381" height="982" alt="image" src="https://github.com/user-attachments/assets/4834283f-a4c1-4cd9-90d1-9fe6304ccaea" />
+</p>
+<p>
+Click "next" for the first two prompts, then ensure dc-1 is the selected and only server listed and click next.
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/388324f5-95c9-4d48-9dab-a5cdc7d591de" />
+</p>
+<p>
+Check the box that correlates with "Active Directory Domain Services" and click "Add features" from the pop-up. Click next when finished.
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/96118466-aa30-42b5-a809-26bbe0abad32" />
+</p>
+<p>
+Continue to click "next" until you reach the "Confirmation" tab. Check the box at the top to enable restarting the destination server automatically if required, then click Install.  
 </p>
 <br />
 
@@ -42,12 +67,5 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </p>
 <p>
 
-</p>
-<br />
-
-<p>
-</p>
-<p>
-  
 </p>
 <br />
