@@ -14,7 +14,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Operating Systems Used </h2>
 
-- Windows Server 2022
+- Windows Server 2025 Datacenter Azure Edition: - x64 Gen2
 - Windows 11 Pro (25H2)
 
 <h2>High-Level Deployment and Configuration Steps</h2>
