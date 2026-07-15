@@ -19,10 +19,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Create the Resource Group and VNet in Azure
+- Set up the Domain Controller VM in Azure and connect it to the newly created VNet.
+- Set the Domain Controller's NIC Private IP address from Dynamic to Static.
+- Set up the Client VM and connect it to the same region and VNet as the Domain Controller.
+- Set the Client VM's DNS settings to the Domain Controller's Private IP. The domain controller will act as the Client VM's DNS Server.
+- After changing the DNS settings for the Client VM, restart it in Azure to initiate the changes made.
+- Log into the Client VM, open powershell and type "ipconfig /all". The DNS settings should show the Domain Controller VM's Private IP address.
 
 <h2>Deployment and Configuration Steps</h2>
 
