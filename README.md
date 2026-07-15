@@ -19,7 +19,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Create the Resource Group and VNet in Azure
+- Create the Resource Group VNet, and subnet in Azure. (SET EVERYTHING TO THE SAME REGION TO PREVENT ISSUES)
 - Set up the Domain Controller VM in Azure and connect it to the newly created VNet.
 - Set the Domain Controller's NIC Private IP address from Dynamic to Static.
 - Set up the Client VM and connect it to the same region and VNet as the Domain Controller.
