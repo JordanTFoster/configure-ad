@@ -96,6 +96,76 @@ Leave "Create DNS Delegation" unchecked and click next until you reach the prere
 <img width="1335" height="982" alt="image" src="https://github.com/user-attachments/assets/1f476b43-b767-4ae5-b25a-3f787e233082" />
 </p>
 <p>
-After reaching the prerequisites check tab, click install once it everything been checked and approved.
+After reaching the prerequisites check tab, click install once everything has been checked and approved. After the install the VM will restart automatically to initiate the changes just made.
 </p>
 <br />
+
+<p>
+<img width="798" height="801" alt="image" src="https://github.com/user-attachments/assets/7387fb05-171b-4aa2-871d-60524a46d566" />
+</p>
+<p>
+Due to dc-1 becoming an actual Domain Controller now, the login credentials have changed. The user is now "mydomain.com\labuser". with mydomain.com being our domain that we created & labuser being the user in that domain that we're logging in as. A "\" must be used not "/" when spacing the domain and user in the username login.
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/cdc3b667-0853-4192-98fd-b570c5f49716" />
+</p>
+<p>
+After signing in to dc-1, open the start menu and search for "Active Directory Users and Computers" and run the application.
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/7ecab276-fa92-4239-ac2d-d425f0710b84" />
+</p>
+<p>
+On the far left panel, right click "mydomain.com" to bring up some options, hover over "New", then click "Organizational Unit".
+</p>
+<br />
+
+<p>
+<img width="762" height="660" alt="image" src="https://github.com/user-attachments/assets/59bef233-2706-4664-a4c2-6a1aa403e7dc" />
+</p>
+<p>
+Title the new Organizational Unit "_EMPLOYEES" do not forget to include the underscore. Click Okay when finished. 
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/7ecab276-fa92-4239-ac2d-d425f0710b84" />
+<img width="760" height="660" alt="image" src="https://github.com/user-attachments/assets/ed6248a7-d93b-49d0-8f3e-5e5527cbf815" />
+</p>
+<p>
+Create one more Organizational Unit, but this time title it "_ADMINS". Same as last time don't forget the underscore and click Okay when finished. The script we'll be running later that creates all of our "employees" relies on the Organizational Units being named correctly. 
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/31b7d942-ff58-4318-8616-d71f1095978d" />
+  
+With the "_ADMINS" folder selected right click either on the folder itself or inisde the empty space. Hover over "New", and click "User".
+</p>
+
+<p>
+<img width="766" height="662" alt="image" src="https://github.com/user-attachments/assets/733c3a34-3638-416c-a86d-f78cd5189487" />
+
+This user is going to be named "Jane Doe" with the username set as "jane_admin". Click next when the information has been filled in.
+</p>
+
+<p>
+<img width="766" height="662" alt="image" src="https://github.com/user-attachments/assets/0358fedc-a064-49ef-ac9b-a192426b1e6f" />
+  
+Set the password as the same password used to sign into dc-1, just to keep things simple. Only check the box that says "Password never expires". then click next when done.
+</p>
+
+<p>
+<img width="766" height="662" alt="image" src="https://github.com/user-attachments/assets/415865fa-7af4-44f0-8348-f98123407145" />
+
+Verify the information is correct and click Finish to create the new user.
+</p>
+<br />
+
+<p>
+
+</p>
