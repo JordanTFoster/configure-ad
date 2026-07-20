@@ -167,5 +167,19 @@ Verify the information is correct and click Finish to create the new user.
 <br />
 
 <p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/4b8fcfe8-cf6c-4765-9602-2978d3be29c1" />
+
+Right click on the user you just created and click on properties. We're going to make this user an admin by adding them to the Domain Admins Security Group.
+</p>
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/3d3912f1-c115-491b-9b3c-79fbb7c29690" />
+
+Inside of the users properties, click on the "Member Of" tab, Click "Add" to create a new group titled "Domain Admins". Click check name to verify correct spelling and spacing, then click "Ok" to create the group and finally click "Apply" to finalize the changes made.
+</p>
+<br />
+
+<p>
+<img width="798" height="804" alt="image" src="https://github.com/user-attachments/assets/cd110dca-d8db-4ae4-9d5a-928f458c1928" />
 
 </p>
