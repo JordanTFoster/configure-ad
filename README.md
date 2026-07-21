@@ -23,8 +23,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Set up the Domain Controller VM in Azure (Titled dc-1) and connect it to the newly created VNet.
 - Set the Domain Controller's NIC Private IP address from Dynamic to Static.
 - Log in to the Domain Controller VM & Deactivate the firewall for dc-1.
-- Set up the Client VM (Titled Client-1) and connect it to the same region, VNet and subnet as the Domain Controller.
-- Set the Client VM's DNS settings to the Domain Controller's Private IP. The domain controller will act as the Client VM's DNS Server.
+- Set up the Client VM (Titled Client-1) and connect it to the same Region, VNet and Subnet as the Domain Controller.
+- Set the Client VM's DNS settings to the Domain Controller's Private IP. The Domain Controller will act as the Client VM's DNS Server.
 - After changing the DNS settings for the Client VM, restart it in Azure to initiate the changes made.
 - Log into the Client VM, open powershell, type "ipconfig /all", hit Enter. The DNS settings should show the Domain Controller VM's Private IP address.
 
@@ -175,11 +175,18 @@ Right click on the user you just created and click on properties. We're going to
 <p>
 <img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/3d3912f1-c115-491b-9b3c-79fbb7c29690" />
 
-Inside of the users properties, click on the "Member Of" tab, Click "Add" to create a new group titled "Domain Admins". Click check name to verify correct spelling and spacing, then click "Ok" to create the group and finally click "Apply" to finalize the changes made.
+Inside of the users properties, click on the "Member Of" tab, Click "Add" to create a new group titled "Domain Admins". Click "Check names" to verify correct spelling and spacing, then click "Ok" to create the group and finally click "Apply" to finalize the changes made.Then log out of the VM so we can sign in with the new Admin users credentials.
 </p>
 <br />
 
 <p>
 <img width="798" height="804" alt="image" src="https://github.com/user-attachments/assets/cd110dca-d8db-4ae4-9d5a-928f458c1928" />
 
+When signing back into the dc-1 VM as the new Admin user we just created, you want to ensure the user info is typed in correctly. For example my user info will be "mydomain.com\jane_admin". Ensure the Domain comes first, seperated by a forward slash "\", followed by the username. Then fill in the password you created and sign into the VM.
 </p>
+<br />
+
+<p>
+
+</p>
+<br />
