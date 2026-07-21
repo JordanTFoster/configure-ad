@@ -182,7 +182,7 @@ Inside of the users properties, click on the "Member Of" tab, Click "Add" to cre
 <p>
 <img width="798" height="804" alt="image" src="https://github.com/user-attachments/assets/cd110dca-d8db-4ae4-9d5a-928f458c1928" />
 
-When signing back into the dc-1 VM as the new Admin user we just created, you want to ensure the user info is typed in correctly. For example my user info will be "mydomain.com\jane_admin". Ensure the Domain comes first, seperated by a forward slash "\", followed by the username. Then fill in the password you created and sign into the VM.
+When signing back into the dc-1 VM as the new Admin user we just created, you want to ensure the user info is typed in correctly. For example my user info will be "mydomain.com\jane_admin". Ensure the Domain comes first, seperated by a forward slash " \ ", followed by the username. Then fill in the password you created and sign into the VM.
 </p>
 <br />
 
