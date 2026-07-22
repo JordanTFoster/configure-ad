@@ -307,11 +307,34 @@ Back on dc-1 logged in with the admin credentials, look up Windows Powershell IS
 <img width="2860" height="1498" alt="image" src="https://github.com/user-attachments/assets/937a696c-fa0a-4ae1-84ca-8ed242498389" />
 
 Click the "New Script" icon directly under the file button inside Windows Powershell ISE. We will copy the script and paste it directly into the top portion of Powershell ISE.
-The only thing I changed was on line 3 of the code I removed a zero from the users being made. Instead of it creating 10,000 users, I will have it create 1000 users just so its a little quicker when we run the script. I did hyperlink it at the beginning, but incase you missed it you can find the script [here.](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) Click the green play button on the top bar to run the script and generate the users into the _EMPLOYEES Organizational Unit.
+The only thing I changed was on line 3 of the code I removed a zero from the users being made. Instead of it creating 10,000 users, I will have it create 1,000 users just so its a little quicker when we run the script. I did hyperlink it at the beginning, but incase you missed it you can find the script [here.](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) Click the green play button on the top bar to run the script and generate the users into the _EMPLOYEES Organizational Unit.
 </p>
 <br />
 
 <p>
+<img width="2860" height="1498" alt="image" src="https://github.com/user-attachments/assets/48bc0a50-0211-4f17-b93b-cd75c4a4ff07" />
 
-
+After running the script take note of the password at the very top of the script on line 2. We will need this to sign into client-1 using one of the user accounts just created. The password will be "Password1".
 </p>
+<br />
+
+<p>
+<img width="1400" height="1312" alt="image" src="https://github.com/user-attachments/assets/b017335b-4145-4398-a3aa-b8c00cc13271" />
+
+On dc-1 open the start menu and look up Active Directory Users and Computers and run the application. We will be verifying that the users we generated with the script all went to the correct _EMPLOYEES Organizational Unit.
+</p>
+
+<p>
+<img width="3199" height="1717" alt="image" src="https://github.com/user-attachments/assets/092bbf05-3391-48d3-92f4-ce84f96be2c6" />
+
+From the drop down menu on the left side open mydomain.com, then click on the _EMPLOYEES Organizational Unit and verify that the created users are there. We will select one of these users to log into client-1 with their credentials. So sign out of your admin account on client-1 if you have not done so.
+</p>
+
+<p>
+<img width="798" height="803" alt="image" src="https://github.com/user-attachments/assets/e9020157-a16e-472a-a814-06c215d151d6" />
+
+Using the domain mydomain.com followed by a back slash " \ " then whatever user you chose. For example my users name is cow.hix, i typed that immediately following the backslash. The password is Password1 as mentioned in the sript. Log into the client-1 VM with your credentials. 
+</p>
+<br />
+
+This concludes the configuration process of Active Directory within Microsoft Azure. 
