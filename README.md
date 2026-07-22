@@ -304,6 +304,14 @@ Back on dc-1 logged in with the admin credentials, look up Windows Powershell IS
 <br />
 
 <p>
+<img width="2860" height="1498" alt="image" src="https://github.com/user-attachments/assets/937a696c-fa0a-4ae1-84ca-8ed242498389" />
+
+Click the "New Script" icon directly under the file button inside Windows Powershell ISE. We will copy the script and paste it directly into the top portion of Powershell ISE.
+The only thing I changed was on line 3 of the code I removed a zero from the users being made. Instead of it creating 10,000 users, I will have it create 1000 users just so its a little quicker when we run the script. I did hyperlink it at the beginning, but incase you missed it you can find the script [here.](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) Click the green play button on the top bar to run the script and generate the users into the _EMPLOYEES Organizational Unit.
+</p>
+<br />
+
+<p>
 
 
 </p>
