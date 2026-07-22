@@ -10,7 +10,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Active Directory Domain Services
-- PowerShell
+- PowerShell [(Script)](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
 
 <h2>Operating Systems Used </h2>
 
@@ -259,5 +259,51 @@ You will recieve a pop-up just click yes to confirm and move it over.
 <br />
 
 <p>
+<img width="798" height="800" alt="image" src="https://github.com/user-attachments/assets/e0ba9216-9940-4d48-a85d-0a37ef198f5f" />
+
+Sign out of client-1 and sign back in using the Admin Credentials we created, mine is jane_admin. 
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/46537836-c459-4b84-9e43-1fa79bc71eb4" />
+
+After signing in to client-1 with the admin credentials, right click the windows logo and click on system.
+</p>
+
+<p>
+<img width="3200" height="1716" alt="image" src="https://github.com/user-attachments/assets/0a8a6086-556b-4817-93f2-9a2197a02f58" />
+
+Scroll down and click on remote desktop.
+</p>
+
+<p>
+<img width="3200" height="1716" alt="image" src="https://github.com/user-attachments/assets/cd349c7a-d981-46c2-8b4e-f078bb09dd72" />
+
+Click "Remote Desktop Users", we're going to add "Domain Users" to the list of users able to remote into this machine. 
+</p>
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/bbd89c17-c643-48fa-ab52-6a10634cfce6" />
+
+Click add to bring up another pop-up window, from here we will type "Domain Users" then click check names to verify spelling and click ok when finished.
+</p>
+
+<p>
+<img width="691" height="609" alt="image" src="https://github.com/user-attachments/assets/4e99e3ed-7ba2-4fe9-99b4-00e5aaf92d4d" />
+
+After successfully filling in the required information click Ok to apply the changes to the remote desktop users.
+</p>
+<br />
+
+<p>
+<img width="1400" height="1312" alt="image" src="https://github.com/user-attachments/assets/a5eeebb3-36d2-4794-9cbf-832e698ac2e9" />
+
+Back on dc-1 logged in with the admin credentials, look up Windows Powershell ISE and run it as an admin. Click yes to allow changes to the device when prompted.
+</p>
+<br />
+
+<p>
+
 
 </p>
