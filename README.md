@@ -208,7 +208,7 @@ Click on the tab "Computer Name", then click "Change".
 <p>
 <img width="2104" height="1626" alt="image" src="https://github.com/user-attachments/assets/93a5c36d-798d-4119-b03d-8d292b2dc89b" />
 
-Click "Member of" to change the domain for client-1. In the box type "mydomain.com" this is joining client-1 to the domain we created. 
+Under "Member of" click the circle titleed Domain to change the domain for client-1. In the box type "mydomain.com" this is joining client-1 to the domain we created. 
 </p>
 
 <p>
