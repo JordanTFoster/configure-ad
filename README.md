@@ -212,6 +212,52 @@ Click "Member of" to change the domain for client-1. In the box type "mydomain.c
 </p>
 
 <p>
+<img width="2103" height="1625" alt="image" src="https://github.com/user-attachments/assets/f5ae475e-62bf-4bc4-82c1-75505f804434" />
 
+You will need to enter the Admin credentials we created earlier in order to authorize the changes made and join the domain. Click Ok when finished. You will get a pop up saying welcome to the domain and it will prompt a restart to initiate the changes made. 
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/9c302cb4-e453-4749-9e53-97a457c2932b" />
+
+Back on the dc-1 VM, search for Active Directory Users and Computers and run the application. We are going to verify that clinet-1 is showing up on the domain under the computers tab.
+</p>
+<br />
+
+<p>
+<img width="1321" height="928" alt="image" src="https://github.com/user-attachments/assets/08794a9d-5a85-475d-ac9d-412cb3ffc9ef" />
+
+Under the mydomain.com drop down on the left side panel, select computers and we should see client-1 under that list. Next we will create a new Organizational Unit and title it "_CLIENTS" and drag client-1 into that new OU.
+</p>
+<br />
+
+<p>
+<img width="1321" height="928" alt="image" src="https://github.com/user-attachments/assets/faf6702d-5524-4548-aed2-2e68f908c796" />
+
+Right click on mydomain.com from the left side drop down, hover over New, Click Organizational Unit.
+</p>
+
+<p>  
+<img width="3199" height="1799" alt="image" src="https://github.com/user-attachments/assets/503a8ab1-c64b-49c7-8b3f-875cfa21613d" />
+
+Title the new Organizational Unit "_CLIENTS" then click Ok when finished. 
+</p>
+<br />
+
+<p>
+<img width="1321" height="928" alt="image" src="https://github.com/user-attachments/assets/4d0d5dee-daf1-4100-a8a3-e9ac90856547" />
+
+Open the Organizational Unit titled Computers to locate client-1 again so we can drag it to the newly created OU titled _CLIENTS. Just simply drag and drop it to the location.
+</p>
+
+<p>
+<img width="3199" height="1799" alt="image" src="https://github.com/user-attachments/assets/f38983e2-deb6-4c56-bc3b-1e37592c48ec" />
+
+You will recieve a pop-up just click yes to confirm and move it over. 
+</p>
+<br />
+
+<p>
 
 </p>
