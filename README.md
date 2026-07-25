@@ -101,5 +101,283 @@ After reaching the prerequisites check tab, click install once everything has be
 <br />
 
 <p>
-Active Directory has successfully been configured on the dc-1 Virtual Machine.  
+<img width="798" height="801" alt="image" src="https://github.com/user-attachments/assets/7387fb05-171b-4aa2-871d-60524a46d566" />
+</p>
+<p>
+Due to dc-1 becoming an actual Domain Controller now, the login credentials have changed. The user is now "mydomain.com\labuser". with mydomain.com being our domain that we created & labuser being the user in that domain that we're logging in as. "\" A back slash must be used not "/"  a front slash when spacing the domain and user in the username login.
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/cdc3b667-0853-4192-98fd-b570c5f49716" />
+</p>
+<p>
+After signing in to dc-1, open the start menu and search for "Active Directory Users and Computers" and run the application.
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/7ecab276-fa92-4239-ac2d-d425f0710b84" />
+</p>
+<p>
+On the far left panel, right click "mydomain.com" to bring up some options, hover over "New", then click "Organizational Unit".
+</p>
+<br />
+
+<p>
+<img width="762" height="660" alt="image" src="https://github.com/user-attachments/assets/59bef233-2706-4664-a4c2-6a1aa403e7dc" />
+</p>
+<p>
+Title the new Organizational Unit "_EMPLOYEES" do not forget to include the underscore. Click Okay when finished. 
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/7ecab276-fa92-4239-ac2d-d425f0710b84" />
+<img width="760" height="660" alt="image" src="https://github.com/user-attachments/assets/ed6248a7-d93b-49d0-8f3e-5e5527cbf815" />
+</p>
+<p>
+Create one more Organizational Unit, but this time title it "_ADMINS". Same as last time don't forget the underscore and click Okay when finished. The script we'll be running later that creates all of our "employees" relies on the Organizational Units being named correctly. 
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/31b7d942-ff58-4318-8616-d71f1095978d" />
+  
+With the "_ADMINS" folder selected right click either on the folder itself or inisde the empty space. Hover over "New", and click "User".
+</p>
+
+<p>
+<img width="766" height="662" alt="image" src="https://github.com/user-attachments/assets/733c3a34-3638-416c-a86d-f78cd5189487" />
+
+This user is going to be named "Jane Doe" with the username set as "jane_admin". Click next when the information has been filled in.
+</p>
+
+<p>
+<img width="766" height="662" alt="image" src="https://github.com/user-attachments/assets/0358fedc-a064-49ef-ac9b-a192426b1e6f" />
+  
+Set the password as the same password used to sign into dc-1, just to keep things simple. Only check the box that says "Password never expires". then click next when done.
+</p>
+
+<p>
+<img width="766" height="662" alt="image" src="https://github.com/user-attachments/assets/415865fa-7af4-44f0-8348-f98123407145" />
+
+Verify the information is correct and click Finish to create the new user.
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/4b8fcfe8-cf6c-4765-9602-2978d3be29c1" />
+
+Right click on the user you just created and click on properties. We're going to make this user an admin by adding them to the Domain Admins Security Group.
+</p>
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/3d3912f1-c115-491b-9b3c-79fbb7c29690" />
+
+Inside of the users properties, click on the "Member Of" tab, Click "Add" to create a new group titled "Domain Admins". Click "Check names" to verify correct spelling and spacing, then click "Ok" to create the group and finally click "Apply" to finalize the changes made.Then log out of the VM so we can sign in with the new Admin users credentials.
+</p>
+<br />
+
+<p>
+<img width="798" height="804" alt="image" src="https://github.com/user-attachments/assets/cd110dca-d8db-4ae4-9d5a-928f458c1928" />
+
+When signing back into the dc-1 VM as the new Admin user we just created, you want to ensure the user info is typed in correctly. For example my user info will be "mydomain.com\jane_admin". Ensure the Domain comes first, seperated by a back slash " \ ", followed by the username. Then fill in the password you created and sign into the VM.
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/9334c136-8a26-47ed-8c65-96a0aa355187" />
+
+Signed into the client-1 VM with the labuser credentials, right click on the windows logo on the task bar. Then click on "System"
+</p>
+<br />
+
+<p>
+<img width="2103" height="1625" alt="image" src="https://github.com/user-attachments/assets/e7df30f7-8689-4719-b64a-8916ed3a80db" />
+
+Click on advanced system settings
+</p>
+
+<p>
+<img width="2103" height="1625" alt="image" src="https://github.com/user-attachments/assets/19a0f219-295d-4d5c-91fc-f385a394dc4d" />
+
+Click on the tab "Computer Name", then click "Change". 
+</p>
+
+<p>
+<img width="2104" height="1626" alt="image" src="https://github.com/user-attachments/assets/93a5c36d-798d-4119-b03d-8d292b2dc89b" />
+
+Under "Member of" click the circle titleed Domain to change the domain for client-1. In the box type "mydomain.com" this is joining client-1 to the domain we created. 
+</p>
+
+<p>
+<img width="2103" height="1625" alt="image" src="https://github.com/user-attachments/assets/f5ae475e-62bf-4bc4-82c1-75505f804434" />
+
+You will need to enter the Admin credentials we created earlier in order to authorize the changes made and join the domain. Click Ok when finished. You will get a pop up saying welcome to the domain and it will prompt a restart to initiate the changes made. 
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/9c302cb4-e453-4749-9e53-97a457c2932b" />
+
+Back on the dc-1 VM, search for Active Directory Users and Computers and run the application. We are going to verify that clinet-1 is showing up on the domain under the computers tab.
+</p>
+<br />
+
+<p>
+<img width="1321" height="928" alt="image" src="https://github.com/user-attachments/assets/08794a9d-5a85-475d-ac9d-412cb3ffc9ef" />
+
+Under the mydomain.com drop down on the left side panel, select computers and we should see client-1 under that list. Next we will create a new Organizational Unit and title it "_CLIENTS" and drag client-1 into that new OU.
+</p>
+<br />
+
+<p>
+<img width="1321" height="928" alt="image" src="https://github.com/user-attachments/assets/faf6702d-5524-4548-aed2-2e68f908c796" />
+
+Right click on mydomain.com from the left side drop down, hover over New, Click Organizational Unit.
+</p>
+
+<p>  
+<img width="3199" height="1799" alt="image" src="https://github.com/user-attachments/assets/503a8ab1-c64b-49c7-8b3f-875cfa21613d" />
+
+Title the new Organizational Unit "_CLIENTS" then click Ok when finished. 
+</p>
+<br />
+
+<p>
+<img width="1321" height="928" alt="image" src="https://github.com/user-attachments/assets/4d0d5dee-daf1-4100-a8a3-e9ac90856547" />
+
+Open the Organizational Unit titled Computers to locate client-1 again so we can drag it to the newly created OU titled _CLIENTS. Just simply drag and drop it to the location.
+</p>
+
+<p>
+<img width="3199" height="1799" alt="image" src="https://github.com/user-attachments/assets/f38983e2-deb6-4c56-bc3b-1e37592c48ec" />
+
+You will recieve a pop-up just click yes to confirm and move it over. 
+</p>
+<br />
+
+<p>
+<img width="798" height="800" alt="image" src="https://github.com/user-attachments/assets/e0ba9216-9940-4d48-a85d-0a37ef198f5f" />
+
+Sign out of client-1 and sign back in using the Admin Credentials we created, mine is jane_admin. 
+</p>
+<br />
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/46537836-c459-4b84-9e43-1fa79bc71eb4" />
+
+After signing in to client-1 with the admin credentials, right click the windows logo and click on system.
+</p>
+
+<p>
+<img width="3200" height="1716" alt="image" src="https://github.com/user-attachments/assets/0a8a6086-556b-4817-93f2-9a2197a02f58" />
+
+Scroll down and click on remote desktop.
+</p>
+
+<p>
+<img width="3200" height="1716" alt="image" src="https://github.com/user-attachments/assets/cd349c7a-d981-46c2-8b4e-f078bb09dd72" />
+
+Click "Remote Desktop Users", we're going to add "Domain Users" to the list of users able to remote into this machine. 
+</p>
+
+<p>
+<img width="3200" height="1800" alt="image" src="https://github.com/user-attachments/assets/bbd89c17-c643-48fa-ab52-6a10634cfce6" />
+
+Click add to bring up another pop-up window, from here we will type "Domain Users" then click check names to verify spelling and click ok when finished.
+</p>
+
+<p>
+<img width="691" height="609" alt="image" src="https://github.com/user-attachments/assets/4e99e3ed-7ba2-4fe9-99b4-00e5aaf92d4d" />
+
+After successfully filling in the required information click Ok to apply the changes to the remote desktop users.
+</p>
+<br />
+
+<p>
+<img width="1400" height="1312" alt="image" src="https://github.com/user-attachments/assets/a5eeebb3-36d2-4794-9cbf-832e698ac2e9" />
+
+Back on dc-1 logged in with the admin credentials, look up Windows Powershell ISE and run it as an admin. Click yes to allow changes to the device when prompted.
+</p>
+<br />
+
+<p>
+<img width="2860" height="1498" alt="image" src="https://github.com/user-attachments/assets/937a696c-fa0a-4ae1-84ca-8ed242498389" />
+
+Click the "New Script" icon directly under the file button inside Windows Powershell ISE. We will copy the script and paste it directly into the top portion of Powershell ISE.
+The only thing I changed was on line 3 of the code I removed a zero from the users being made. Instead of it creating 10,000 users, I will have it create 1,000 users just so its a little quicker when we run the script. I did hyperlink it at the beginning, but incase you missed it you can find the script [here.](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) Click the green play button on the top bar to run the script and generate the users into the _EMPLOYEES Organizational Unit.
+</p>
+<br />
+
+<p>
+<img width="2860" height="1498" alt="image" src="https://github.com/user-attachments/assets/48bc0a50-0211-4f17-b93b-cd75c4a4ff07" />
+
+After running the script take note of the password at the very top of the script on line 2. We will need this to sign into client-1 using one of the user accounts just created. The password will be "Password1".
+</p>
+<br />
+
+<p>
+<img width="1400" height="1312" alt="image" src="https://github.com/user-attachments/assets/b017335b-4145-4398-a3aa-b8c00cc13271" />
+
+On dc-1 open the start menu and look up Active Directory Users and Computers and run the application. We will be verifying that the users we generated with the script all went to the correct _EMPLOYEES Organizational Unit.
+</p>
+
+<p>
+<img width="3199" height="1717" alt="image" src="https://github.com/user-attachments/assets/092bbf05-3391-48d3-92f4-ce84f96be2c6" />
+
+From the drop down menu on the left side open mydomain.com, then click on the _EMPLOYEES Organizational Unit and verify that the created users are there. We will select one of these users to log into client-1 with their credentials. So sign out of your admin account on client-1 if you have not done so.
+</p>
+
+<p>
+<img width="798" height="803" alt="image" src="https://github.com/user-attachments/assets/e9020157-a16e-472a-a814-06c215d151d6" />
+
+Using the domain mydomain.com followed by a back slash " \ " then whatever user you chose. For example my users name is cow.hix, i typed that immediately following the backslash. The password is Password1 as mentioned in the sript. Log into the client-1 VM with your credentials just to verify that the script ran correctly and the user account got created successfully. Next we will configure the Account Lockout Policy using Group Policy in Active Directory to finalize this configuration.
+<br />
+
+<p>
+<img width="800" height="750" alt="image" src="https://github.com/user-attachments/assets/614f8d46-1167-4c49-ac43-079412ab4d74" />
+
+On dc-1 click the windows logo, search for "Group Policy Management" and run the application. 
+</p>
+<br />
+
+<p>
+<img width="754" height="530" alt="image" src="https://github.com/user-attachments/assets/7a31fb92-766b-455b-a517-4d9132693753" />
+
+Using the drop downs on the left side panel, navigate to mydomain.com's Default Domain Policy. Right click it and click edit.
+</p>
+<br />
+
+<p>
+<img width="1158" height="640" alt="image" src="https://github.com/user-attachments/assets/00032196-6ef7-42e3-8bec-b0b7e4453544" />
+
+Using the drop downs on the left side panel, navigate to the following directory. Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy. Clicking on "Account Lockout Policy" will change the right panel of the window allowing you to congfigure the lockout policy.
+</p>
+<br />
+
+<p>
+<img width="1158" height="640" alt="image" src="https://github.com/user-attachments/assets/9c44f778-d68b-4ba1-a071-6bd3fca3fee1" />
+
+Double click "Account lockout duration to bring up a window to change the settings. Check the box titled "Define this policy setting" to change the lockout time to 30 minutes.
+</p>
+<br />
+
+<p>
+<img width="1158" height="640" alt="image" src="https://github.com/user-attachments/assets/8f932aed-ab4a-4628-b698-9b167eae6ce1" />
+
+After clicking apply another window will pop up stating that the Account lockout threshold and Reset account lockout counter will automatically be configured. Click Ok to apply the changes made. It will originally take 90 minutes for the changes to the policy to propogate to all the computers, or we can force update it via command prompt which we will be doing.
+</p>
+<br />
+
+<p>
+<img width="456" height="568" alt="image" src="https://github.com/user-attachments/assets/f28cc1a4-81ed-4765-8128-c2d780179f24" />
+
+Sign into client-1 using Admin credentials. 
+</p>
+<br />
+
+<p>
+
 </p>
