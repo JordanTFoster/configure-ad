@@ -379,5 +379,19 @@ Sign into client-1 using Admin credentials.
 <br />
 
 <p>
+<img width="828" height="860" alt="image" src="https://github.com/user-attachments/assets/e9a343a8-c955-4ea1-8ec8-a7b30fece2ec" />
 
+ On the client-1 VM, search for command prompt and run it as an administrator. 
+</p>
+<br />
+
+<p>
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/ad1b93d5-577f-472d-9a55-45b16d404e15" />
+
+Inside command prompt type "gpupdate /force" then press enter to update the policy. 
+</p>
+<br />
+
+<p>
+This concludes the configuration of Active Directory within Microsoft Azure Virtual Machines.
 </p>
